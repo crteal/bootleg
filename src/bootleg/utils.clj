@@ -524,7 +524,7 @@
   (apply spit f data opts))
 
 (defmacro embed [filename]
-  (slurp filename))
+  (slurp (io/resource filename)))
 
 (defn pprint-str [form & [opts]]
   (with-out-str (fipp/pprint form opts)))
